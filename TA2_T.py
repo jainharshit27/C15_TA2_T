@@ -27,8 +27,8 @@ class Target:
         space.add(self.body, self.shape)
         
     def draw(self, image):
-        screen.blit(rope_img, (round(self.body.position.x-85), 0))
-        screen.blit(rope_img, (round(self.body.position.x-70), 0))
+        screen.blit(rope_img, (round(self.body.position.x-5), 0))
+        screen.blit(rope_img, (round(self.body.position.x-20), 0))
         screen.blit(image, (round(self.body.position.x-15), round(self.body.position.y-80)))
     
 def powerbar(ticks):
@@ -80,7 +80,7 @@ target = Target()
 target_image = pygame.image.load("target.png")
 target_image = pygame.transform.scale(target_image, (25,160))
 rope_img = pygame.image.load("rope.png")
-rope_img = pygame.transform.scale(rope_img, (150,400))
+rope_img = pygame.transform.scale(rope_img, (25,400))
 
 #Arrow
 arrow = Arrow(130,85)
